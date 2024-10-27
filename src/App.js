@@ -3,26 +3,25 @@ import { Header, Category, ProductsPage } from './components';
 import { Routes, Route, Link } from 'react-router-dom';
 
 function App() {
-  return (
 
+  return (
     <>
       <Header />
       <nav>
-        <Link to="/electronics">electronics</Link>
+        <Link to="/electronics">electronics </Link>
         <Link to="/jewlery ">jewlery</Link>
       </nav>
       <Routes>
-        <Route path="/" element={<App />} />
-        <Route path="/electronics" element={<ProductsPage />} />
-        <Route path="/jewlery" element={<ProductsPage />} />
+        <Route path="/electronics" element={<ProductsPage categoryPruducts='electronics'/>} />
+        <Route path="/jewlery" element={<ProductsPage categoryPruducts='jewelery'/>} />
       </Routes>
 
       <Category 
           nameCategory="electronics" 
-          img="./images/electronics.jpg" />
+          img="../images/electronics.jpg" />
       <Category 
           nameCategory="jewlery" 
-          img="./images/jewlery.jpg" />
+          img="../images/jewlery.jpg" />
     </>
   );
 }
