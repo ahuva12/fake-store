@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { getRelevantProducts } from '../service/logic.js';
 import Product from './Product.jsx';
+import style from '../css/ProductsPage.module.css'
 
 const ProductsPage = ({ categoryPruducts }) => {
     const [productsForRender, setProductsForRender] = useState([]); 
@@ -15,8 +16,7 @@ const ProductsPage = ({ categoryPruducts }) => {
     }, [categoryPruducts]);
 
     return (
-        <>
-            <h2>{categoryPruducts}</h2>
+        <div className={style.ProductsPage}>
             {productsForRender.map(product => (
                 <Product 
                     key={product.id}
@@ -27,7 +27,7 @@ const ProductsPage = ({ categoryPruducts }) => {
                     img={product.image}
                 />
             ))}
-        </>
+        </div>
     );
 };
 

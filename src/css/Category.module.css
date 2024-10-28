@@ -1,0 +1,11 @@
+/* .Category {
+    background-color: blue;
+} */
+
+.Category img {
+    width: 25rem;
+    height: 16.7rem;
+    margin: 3rem 6rem 0 6rem;
+    border-radius: 8%;
+    border: 2px solid black;
+}

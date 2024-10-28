@@ -1,0 +1,46 @@
+.Product {
+    background-color: rgb(222, 162, 242);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border: 3px solid black;
+
+}
+
+.detailsProduct{
+    /* background-color: purple; */
+    display: flex;
+}
+
+.detailsProduct img {
+    width: 10rem;
+    height: 10rem;
+    border: 1px solid black;
+    border-radius: 5%;
+}
+
+.imgPrice {
+    /* background-color: yellow; */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 50%;
+}
+
+.descriptionRating{
+    /* background-color: peru; */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 50%;
+}
+
+.descriptionRating .rating {
+    font-weight: bold;
+}
+
+
+.imgPrice .price {
+    font-weight: bold;
+}
