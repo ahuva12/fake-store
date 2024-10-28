@@ -4,11 +4,15 @@
     flex-direction: column;
     align-items: center;
     border: 3px solid black;
+}
 
+.Product .title {
+    font-weight: bold;
+    font-size: 1.5rem;
+    margin: 15px 0;
 }
 
 .detailsProduct{
-    /* background-color: purple; */
     display: flex;
 }
 
@@ -24,7 +28,10 @@
     display: flex;
     flex-direction: column;
     align-items: center;
+    justify-content: space-between;
     width: 50%;
+    padding: 0.8rem;
+
 }
 
 .descriptionRating{
@@ -32,8 +39,10 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: center;
+    justify-content: space-between;
     width: 50%;
+    padding: 0.8rem;
+
 }
 
 .descriptionRating .rating {

@@ -1,7 +1,7 @@
 
-export const getAllProducts = async (category) => {
+export const getAllProducts = async (category, url) => {
     try {
-        const res = await fetch('https://fakestoreapi.com/products');
+        const res = await fetch(url);
         if (!res.ok) {
             throw new Error('Network response was not ok');
         }
@@ -16,8 +16,11 @@ export const getAllProducts = async (category) => {
 export const getRelevantProducts = async (category) => {
     
     if (getTimeDifference(category) >= 10000) {
+        const url = category === 'books' ? 'http://localhost:3001/books' : 'https://fakestoreapi.com/products';
+        console.log(url)
         try {
-            const products = await getAllProducts(category); 
+            const products = await getAllProducts(category, url); 
+            console.log(products);
             updateResponseReceivedTime(category);
             const relevantProducts = products.filter(prod => prod.category === category); 
             updateProductsInLocalStorage(category, relevantProducts)

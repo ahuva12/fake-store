@@ -4,7 +4,7 @@ import style from '../css/Product.module.css'
 const Product = ({title, description, price, rating, img}) => {
     return (
         <div className={style.Product}>
-            <p>{title}</p>
+            <p className={style.title}>{title}</p>
             <div className={style.detailsProduct}>
                 <div className={style.imgPrice}>
                     <img src={img} alt={title} />

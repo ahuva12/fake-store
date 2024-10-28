@@ -7,8 +7,9 @@ function App() {
     <>
       <Header />
       <nav className='nav'>
-        <Link className='link' to="/electronics">electronics</Link>
-        <Link className='link' to="/jewlery">jewlery</Link>
+        <Link className='link' to="/electronics">Electronics</Link>
+        <Link className='link' to="/jewlery">Jewlery</Link>
+        <Link className='link' to="/books">Books</Link>
       </nav>
 
       <Routes>
@@ -23,12 +24,16 @@ function App() {
                 <Category 
                     nameCategory="jewlery" 
                     img="/images/jewlery.jpg" />
+                <Category 
+                    nameCategory="books" 
+                    img="/images/books.jpg" />
               </div>
             </>
           }
         />
         <Route path="/electronics" element={<ProductsPage categoryPruducts='electronics' />} />
         <Route path="/jewlery" element={<ProductsPage categoryPruducts='jewelery' />} />
+        <Route path="/books" element={<ProductsPage categoryPruducts='books' />} />
       </Routes>
     </>
   );
